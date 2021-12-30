@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Poppins";
+    font-weight: bold;
+}
+
+.brand {
+    font-weight: bold;
+}
+
+.main-menu li {
+    list-style: none;
+    display: inline;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.main-menu li a {
+    color: #111;
+    text-decoration: none;
+}
+
+.main-menu li a:hove {
+    color: #77a454;
+}
+
+.form-row {
+    margin-top: 10px;
+}
+
+.use-name {
+    color: #424bac;
+}
+
+.messsages {
+    margin: 10px;
+    padding: 5px;
+    font-family: "Poppins";
+    font-weight: bold;
+}
+
+@media(max-width:1200px) {
+    .main-menu {
+        display: none;
+    }
+}
