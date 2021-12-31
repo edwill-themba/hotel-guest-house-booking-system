@@ -49,9 +49,11 @@ class CheckOutController extends Controller
         $booking = DB::delete('delete from bookings where id =?',[$booking_id]);
         //cart holder name for the email
         $data = array(
-          'email' => $request->input('email'),
-          'name'  => $request->input('name'),
-          'amount' => $request->input('amount')
+          'email'      => $request->input('email'),
+          'name'       => $request->input('name'),
+          'amount'     => $request->input('amount'),
+          'start_date' => $request->input('start_date'),
+          'end_date'   => $request->input('end_date')
          );
         Mail::to($data['email'])->send(new SendMail($data));
         return redirect('/checkout')->with('success_message','thank you for choosing us');

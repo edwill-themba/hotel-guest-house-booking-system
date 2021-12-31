@@ -1,4 +1,4 @@
-alert('Hi');
+//alert('Hi');
 var stripe = Stripe('pk_test_hmSdzSCSIjZYAqx94cXpmHje00E6YbFJKN');
 // Custom styling can be passed to options when creating an Element.
 //var stripe = Stripe('your information');
