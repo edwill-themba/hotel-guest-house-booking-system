@@ -29,7 +29,7 @@ class CheckOutController extends Controller
         try{
          
         
-         $stripe = new \Stripe\StripeClient("sk_test_1llQ7a6Ha5q9I0ztYNZoMEmR00qlgGPsy2");
+         $stripe = new \Stripe\StripeClient("");
          $charge = $stripe->charges->create([
           'amount' => ($request->input('amount') * 100),
           'currency' => 'ZAR',
