@@ -13,7 +13,7 @@
            </form>
       </li>
        <li><a href="#">{{ Auth::user()->name }}</a></li>
-       <li><a href="#">Make Booking</a></li>
+       <li><a href="/booking/create">Make Booking</a></li>
       @else
        <li><a href="/register_view">Register</a></li> 
        <li><a href="/login_view">Login</a></li>

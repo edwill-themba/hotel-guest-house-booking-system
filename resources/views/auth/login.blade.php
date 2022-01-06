@@ -14,6 +14,7 @@
                       </div>
                        <div class="form-row">
                           <input type="submit" name="submit" value="login" class="btn btn-primary btn-block">
+                          <a href="/user/edit">Did you forget your password?</a>
                       </div>
                   </form>
                 </div>

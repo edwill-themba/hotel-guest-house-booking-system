@@ -8,7 +8,7 @@
             <div class="cart cart-body">
                <p>View Your Bookings</p>
                <div class="form-row">
-                 <a href="#" class="btn btn-info">View Current Bookings</a>
+                <a href="{{route('booking.index')}}" class="btn btn-info">View Current Bookings</a>
                </div>
                <form action="{{route('booking.store')}}" method="post">
                  {{ csrf_field() }}

@@ -2,14 +2,27 @@
 @section('content')
 <div class="row">
      <div class="col-sm-12">
-           <!-- form for cancel order -->
-              <form action="/booking/{{$booking->id}}/delete" method="POST">
-                {{ csrf_field() }}
-              <input type="hidden" name="_method" value="delete">
-              <button type="submit" class="btn btn-danger btn-block">Cancel Booking</button>
-            </form>
-            <!-- end form -->
-            <h3>Proceed Payments</h3>
+          <table class="table table striped">
+              <tr>
+                 <th>Cancel Booking</th>
+                 <th>Edit Booking</th>
+              </tr>
+              <tr>
+                <td>
+                 <!-- form for cancel order -->
+                 <form action="/booking/{{$booking->id}}/delete" method="POST">
+                   {{ csrf_field() }}
+                   <input type="hidden" name="_method" value="delete">
+                   <button type="submit" class="btn btn-danger btn-block">Cancel Booking</button>
+                 </form>
+                 <!-- end form -->
+                </td>
+                <td>
+                <a href="/booking/{{$booking->id}}/edit" class="btn btn-warning">Edit Booking</a>
+                </td>
+              </tr>
+           </table>
+           <h3>Proceed Payments</h3>
             <!-- stripe payment form -->
           <form id="payment-form" method="POST" class="frm-payment" action="{{route('checkout.store')}}">
               {{ csrf_field() }}

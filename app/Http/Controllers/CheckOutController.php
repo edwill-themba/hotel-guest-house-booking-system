@@ -45,8 +45,8 @@ class CheckOutController extends Controller
         $book->amount = $request->input('amount');
         $book->no_Of_Days = $request->input('no_Of_Days');
         $book->save();
-        // delete the bookings from booking table
-        $booking = DB::delete('delete from bookings where id =?',[$booking_id]);
+        // update booking status
+        $update_status = DB::update('update bookings set status = 1 where id =:id', ['id'=>$booking_id]);
         //cart holder name for the email
         $data = array(
           'email'      => $request->input('email'),
